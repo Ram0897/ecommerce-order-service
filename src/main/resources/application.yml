@@ -12,10 +12,13 @@ spring:
   flyway:
     enabled: true
     locations: classpath:db/migration
-
 server:
   port: ${PORT:8080}
-
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+app:
+  security:
+    jwt-secret: ${JWT_SECRET:change-this-development-secret-to-at-least-32-characters}
+    username: ${APP_USERNAME:admin}
+    password: ${APP_PASSWORD:change-me}
